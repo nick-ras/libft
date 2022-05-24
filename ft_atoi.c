@@ -6,7 +6,7 @@
 /*   By: nickras <nickras@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/06 20:43:09 by nickras           #+#    #+#             */
-/*   Updated: 2022/05/16 19:26:10 by nickras          ###   ########.fr       */
+/*   Updated: 2022/05/24 16:05:51 by nickras          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,9 @@ int	ft_atoi(const char *str)
 
 /* int	main(void)
 {
+
+
+	
 	printf("%d", ft_atoi("-5467777777"));
 	return (0);
 } */

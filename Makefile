@@ -6,7 +6,7 @@
 #    By: nickras <nickras@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/09 12:52:06 by nickras           #+#    #+#              #
-#    Updated: 2022/05/24 12:08:24 by nickras          ###   ########.fr        #
+#    Updated: 2022/05/24 16:11:23 by nickras          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,8 @@ SRC = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_strlen
 SRCBONUS = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c	
 
 FLAGS = -Wall -Wextra -Werror
+
+RM = rm -rf
 
 #If objeft doesnt exist, it will create one
 OBJS =      $(SRC:.c=.o)
@@ -35,19 +37,20 @@ bonus: $(OBJSBONUS)
 	ar rcs $(NAMELIB) $(OBJSBONUS)
 	
 clean:
-	rm -f *.o *.so
+	$(RF) $(OBJSBONUS)
 
 fclean: clean
-	rm -f $(NAMELIB)
+	$(RF) $(NAMELIB)
 
 # if object file doesnt exist, or soruce file has changed, (refers to) two different files
 %.o: %.c
-	$(CC) -c $(CFLAGS) $^ -o $@
+	$(CC) -c $^ $(CFLAGS)  -o $@
 
+#remmeber to add  "libft.so" to clean
 #so:
 #	$(CC) -nostartfiles -fPIC $(FLAGS) $(SRCBONUS) 
 #	gcc -nostartfiles -shared -o libft.so $(OBJSBONUS)
 
 re: fclean all
 
-.PHONY: all fclean re
+.PHONY: all fclean re bonus

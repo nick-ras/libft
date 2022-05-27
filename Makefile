@@ -6,7 +6,7 @@
 #    By: nickras <nickras@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/09 12:52:06 by nickras           #+#    #+#              #
-#    Updated: 2022/05/24 16:11:23 by nickras          ###   ########.fr        #
+#    Updated: 2022/05/27 12:57:05 by nickras          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,10 +37,10 @@ bonus: $(OBJSBONUS)
 	ar rcs $(NAMELIB) $(OBJSBONUS)
 	
 clean:
-	$(RF) $(OBJSBONUS)
+	$(RM) $(OBJSBONUS)
 
 fclean: clean
-	$(RF) $(NAMELIB)
+	$(RM) $(NAMELIB)
 
 # if object file doesnt exist, or soruce file has changed, (refers to) two different files
 %.o: %.c

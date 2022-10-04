@@ -14,6 +14,8 @@
 
 #include "libft.h"
 
+//calculates substring by counting the amount of times the 
+//delimiter "c" comes up
 static int	count_words(char const *s, char c)
 {
 	int	i;
@@ -38,6 +40,7 @@ static int	count_words(char const *s, char c)
 	return (words);
 }
 
+//Calculates the amount of bytes for each array and put each string in each substring of the 2d array
 static char	**create_substrings(char const *s, char	**str2d, char c)
 {
 	unsigned int	i;
@@ -66,6 +69,8 @@ static char	**create_substrings(char const *s, char	**str2d, char c)
 	return (str2d);
 }
 
+//My own implementation of the C library function.
+//The functions makes a 2d array and uses subfunction to put the values into the substrings
 char	**ft_split(char const *s, char c)
 {
 	char	**str2d;

@@ -24,3 +24,4 @@ The focus is on building a set of utility functions that will be useful in futur
    ```bash
    make
 2. **You can now use the library**
+  Its called libft.a

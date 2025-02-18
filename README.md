@@ -24,7 +24,9 @@ The focus is on building a set of utility functions that will be useful in futur
    ```bash
    make
 
-2. **Usage**
+Then you get the libft.a. Put libft.a and header file where you prefer your libraries to be.
+
+**Usage**
 
 To use `libft` in your project, include the header file and compile with the library:
 
@@ -38,8 +40,3 @@ int main()
     free(str);
     return 0;
 }
-```
-Compile with:
-
-```bash
-gcc main.c libft.a -o test_program

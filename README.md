@@ -23,5 +23,23 @@ The focus is on building a set of utility functions that will be useful in futur
 
    ```bash
    make
-2. **You can now use the library**
-  Its called libft.a
+
+2. **Usage**
+
+To use `libft` in your project, include the header file and compile with the library:
+
+```c
+#include "libft.h"
+
+int main()
+{
+    char *str = ft_strdup("Hello, world!");
+    ft_putstr_fd(str, 1);
+    free(str);
+    return 0;
+}
+```
+Compile with:
+
+```bash
+gcc main.c libft.a -o test_program
